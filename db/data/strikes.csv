@@ -1,0 +1,20 @@
+strike_name,type,belt_rank
+Front Two Knuckle,linear,1
+Thrust Punch,linear,1
+Back Two Knuckle,linear,1
+Palm Heel,linear,1
+Hammer,linear,1
+Cross Shuto,circular,2
+Rising Elbow,circular,2
+Roundhouse Elbow,circular,2
+Backfist,circular,2
+Hook Punch,circular,3
+Side Elbow,circular,3
+Rear Elbow,circular,3
+Downward Elbow,circular,3
+Chicken Wrist,circular,3
+Spearhand,linear,3
+Tiger’s Claw,circular,4
+Tiger's Rake ,circular,4
+Iron Palm,linear,4
+Downward Shuto,circular,4

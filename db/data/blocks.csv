@@ -1,0 +1,36 @@
+block,blocking_system
+Fist 1,1
+Fist 2,1
+Fist 3,1
+Fist 4,1
+Fist 5,1
+Fist 6,1
+Fist 7,1
+Fist 8,1
+Knife 1,2
+Knife 2,2
+Knife 3,2
+Knife 4,2
+Knife 5,2
+Knife 6,2
+Knife 7,2
+Knife 8,2
+Fist 1 w/ Counter,3
+Fist 2 w/ Counter,3
+Fist 3 w/ Counter,3
+Fist 4 w/ Counter,3
+Fist 5 w/ Counter,3
+Fist 6 w/ Counter,3
+Fist 7 w/ Counter,3
+Fist 8 w/ Counter,3
+Hammer 1,4
+Hammer 2,4
+Knife 1 w/ Counter,5
+Knife 2 w/ Counter,5
+Knife 3 w/ Counter,5
+Knife 4 w/ Counter,5
+Knife 5 w/ Counter,5
+Knife 6 w/ Counter,5
+Knife 7 w/ Counter,5
+Knife 8 w/ Counter,5
+Wing Block,6
