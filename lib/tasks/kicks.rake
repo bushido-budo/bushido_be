@@ -7,7 +7,7 @@ namespace :csv_load do
 
     CSV.foreach(file, headers: true) do |row|
       Kick.create!(
-        kick_name: row[0],
+        kick: row[0],
         belt_rank_id: row[1]
       )
     end
