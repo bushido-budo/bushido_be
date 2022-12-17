@@ -7,7 +7,7 @@ namespace :csv_load do
 
     CSV.foreach(file, headers: true) do |row|
       AnimalTrait.create!(
-        characteristic: row[1],
+        characteristic: row[0],
         shaolin_animal_id: row[1]
       )
     end

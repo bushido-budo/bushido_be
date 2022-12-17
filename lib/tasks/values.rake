@@ -7,8 +7,7 @@ namespace :csv_load do
 
     CSV.foreach(file, headers: true) do |row|
       Value.create!(
-        value: row[0],
-        definition: row[1]
+        value: row[0]
       )
     end
   end

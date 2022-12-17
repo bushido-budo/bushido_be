@@ -7,7 +7,6 @@ namespace :csv_load do
 
     CSV.foreach(file, headers: true) do |row|
       BeltRank.create!(
-        id: row[0],
         rank: row[1]
       )
     end
