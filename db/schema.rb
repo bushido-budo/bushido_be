@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_17_183052) do
+ActiveRecord::Schema.define(version: 2022_12_17_185602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 2022_12_17_183052) do
   end
 
   create_table "kata_forms", force: :cascade do |t|
-    t.string "kata_from"
+    t.string "kata_form"
     t.bigint "belt_rank_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -166,7 +166,7 @@ ActiveRecord::Schema.define(version: 2022_12_17_183052) do
 
   create_table "strikes", force: :cascade do |t|
     t.string "strike_name"
-    t.string "type"
+    t.string "strike_type"
     t.bigint "belt_rank_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
