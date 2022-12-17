@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateFootWorks < ActiveRecord::Migration[5.2]
   def change
     create_table :foot_works do |t|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateUserBeltRanks < ActiveRecord::Migration[5.2]
   def change
     create_table :user_belt_ranks do |t|

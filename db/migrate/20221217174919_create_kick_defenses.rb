@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateKickDefenses < ActiveRecord::Migration[5.2]
   def change
     create_table :kick_defenses do |t|
