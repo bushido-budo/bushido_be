@@ -1,0 +1,2 @@
+class ShaolinAnimal < ApplicationRecord
+end

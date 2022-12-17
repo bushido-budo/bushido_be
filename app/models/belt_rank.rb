@@ -1,0 +1,2 @@
+class BeltRank < ApplicationRecord
+end
