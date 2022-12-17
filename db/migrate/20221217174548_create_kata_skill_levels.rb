@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateKataSkillLevels < ActiveRecord::Migration[5.2]
   def change
     create_table :kata_skill_levels do |t|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateBlockingSystems < ActiveRecord::Migration[5.2]
   def change
     create_table :blocking_systems do |t|

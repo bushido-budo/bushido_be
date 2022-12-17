@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateKataSkills < ActiveRecord::Migration[5.2]
   def change
     create_table :kata_skills do |t|

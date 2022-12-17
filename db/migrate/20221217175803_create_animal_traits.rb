@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateAnimalTraits < ActiveRecord::Migration[5.2]
   def change
     create_table :animal_traits do |t|
