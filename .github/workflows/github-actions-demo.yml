@@ -33,8 +33,9 @@ jobs:
       - name: Install dependencies
         run: bundle install
       - name: Build and Run tests
-        run: bundle exec rails db:create
-        run: bundle exec rails db:migrate
-        run: bundle exec rake
+        run: |
+          bundle exec rails db:create
+          bundle exec rails db:migrate
+          bundle exec rake
       - name: Rubocop
         run: rubocop
