@@ -32,4 +32,20 @@ RSpec.describe User, type: :model do
     it { should have_many :kicks_of_the_four_tides }
     it { should have_many :strikes }
   end
+
+  describe 'enum' do
+    it 'enum user_status 0 is a student' do
+      user = create(:user, user_status: 0)
+
+      expect(user.student?).to eq true
+      expect(user.sensei?).to eq false
+    end
+
+    it 'enum user_status 1 is a sensei' do
+      user = create(:user, user_status: 1)
+
+      expect(user.student?).to eq false
+      expect(user.sensei?).to eq true
+    end
+  end
 end

@@ -27,4 +27,6 @@ class User < ApplicationRecord
   has_many :stances, through: :belt_ranks
   has_many :kicks_of_the_four_tides, through: :belt_ranks
   has_many :strikes, through: :belt_ranks
+
+  enum user_status: %i[student sensei]
 end
