@@ -22,3 +22,6 @@ Style/MixinUsage:
   Exclude:
     - 'bin/setup'
     - 'bin/update'
+
+Metrics/BlockLength:
+  Enabled: false
