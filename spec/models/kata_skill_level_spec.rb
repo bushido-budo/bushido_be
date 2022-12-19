@@ -3,5 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe KataSkillLevel, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to :belt_rank }
+  it { should have_many :kata_skills }
 end

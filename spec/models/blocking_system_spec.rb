@@ -3,5 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe BlockingSystem, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should have_many :blocks }
+  it { should belong_to :belt_rank }
 end
