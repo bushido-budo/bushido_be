@@ -54,7 +54,8 @@ jobs:
       #   run: bin/bundler-audit --update
       # - name: Security audit application code
       #   run: bin/brakeman -q -w2
-      - name: Bundle Update
-        run: bundle update uri
+      - name: URI gem update
+        run: gem uninstall uri
+        run: gem install uri -v 0.12.0
       - name: Lint Ruby files
         run: bundle exec rubocop --parallel
