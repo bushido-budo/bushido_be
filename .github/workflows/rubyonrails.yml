@@ -46,17 +46,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Install Ruby and gems
-        uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
+        uses: ruby/setup-ruby@v1
+        # uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
         with:
+          ruby-version: 2.7.4
           bundler-cache: true
       # Add or replace any other lints here
       # - name: Security audit dependencies
       #   run: bin/bundler-audit --update
       # - name: Security audit application code
       #   run: bin/brakeman -q -w2
-      - name: URI gem update
-        run: |
-          gem uninstall uri
-          gem install uri -v 0.12.0
+      # - name: URI gem update
+      #   run: |
+      #     gem uninstall uri
+      #     gem install uri -v 0.12.0
       - name: Lint Ruby files
         run: bundle exec rubocop --parallel
