@@ -41,6 +41,7 @@ jobs:
         run: bin/rake
 
   lint:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -48,7 +49,6 @@ jobs:
       - name: Install Ruby and gems
         uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
         with:
-          ruby-version: '2.7.4'
           bundler-cache: true
       # Add or replace any other lints here
       # - name: Security audit dependencies
@@ -56,4 +56,4 @@ jobs:
       # - name: Security audit application code
       #   run: bin/brakeman -q -w2
       - name: Run Rubocop
-        run: bundle exec rubocop --autocorrect
+        run: bundle exec rubocop
