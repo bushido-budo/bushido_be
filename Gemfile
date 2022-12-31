@@ -31,7 +31,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rack-cors'
 
 gem 'net-http'
-gem 'rubocop'
 
 group :development, :test do
   gem 'capybara'
@@ -41,6 +40,7 @@ group :development, :test do
   gem 'orderly'
   gem 'pry'
   gem 'rspec-rails'
+  gem 'rubocop'
   gem 'rubocop-faker'
   gem 'rubocop-rails'
   gem 'shoulda-matchers'
