@@ -43,7 +43,6 @@ group :development, :test do
   gem 'rubocop'
   gem 'rubocop-faker'
   gem 'rubocop-rails'
-  gem 'rubocop-rake', require: false
   gem 'shoulda-matchers'
   gem 'simplecov'
 end
