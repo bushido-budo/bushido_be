@@ -21,10 +21,9 @@ jobs:
         env:
           POSTGRES_DB: rails_test
           POSTGRES_USER: rails
-          POSTGRES_PASSWORD: password
     env:
       RAILS_ENV: test
-      DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
+      DATABASE_URL: "postgres://localhost:5432/rails_test"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -50,9 +49,10 @@ jobs:
         with:
           bundler-cache: true
       # Add or replace any other lints here
-      - name: Security audit dependencies
-        run: bin/bundler-audit --update
       - name: Security audit application code
         run: bin/brakeman -q -w2
       - name: Lint Ruby files
         run: bin/rubocop --parallel
+      - name: RSpec tests
+        run: |
+          bundle exec rspec spec
