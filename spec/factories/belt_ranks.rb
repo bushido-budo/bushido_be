@@ -2,6 +2,7 @@
 
 FactoryBot.define do
   factory :belt_rank do
-    rank { 'MyString' }
+    id { 1 }
+    rank { 'white' }
   end
 end

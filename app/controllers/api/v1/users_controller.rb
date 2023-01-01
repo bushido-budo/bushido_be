@@ -28,7 +28,6 @@ module Api
       end
 
       def new_belt_params
-        binding.pry
         {
           belt_rank_id: 1,
           jump_rope: nil,

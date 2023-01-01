@@ -8,19 +8,19 @@ class UsersSerializer
         'first_name': user.first_name,
         'last_name': user.last_name,
         'user_status': user.user_status,
-        'current_belt_rank': user.belt_ranks,
+        'current_belt_rank': user.belt_ranks.last.rank,
         'belt_test_metrics': {
           "student_average": {
-            "jump rope": nil,
-            "sit ups": nil,
-            "balanced kicks": nil,
-            "lunge pumps": nil
+            "jump_rope": user.user_belt_ranks.last.jump_rope,
+            "sit_ups": user.user_belt_ranks.last.sit_ups,
+            "balanced_kicks": user.user_belt_ranks.last.balanced_kicks,
+            "lunge_pumps": user.user_belt_ranks.last.lunge_pumps
           },
           "dojo_average": {
-            "jump rope": 98,
-            "sit ups": 67,
-            "balanced kicks": 38,
-            "lunge pumps": 42
+            "jump_rope": 98,
+            "sit_ups": 67,
+            "balanced_kicks": 38,
+            "lunge_pumps": 42
           }
         },
         "current_material": {

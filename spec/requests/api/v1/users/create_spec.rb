@@ -5,6 +5,7 @@ require 'rails_helper'
 RSpec.describe 'create user', type: :request do
   describe 'happy path create user' do
     before :each do
+      BeltRank.create!(id: 1, rank: 'white')
       @user_params = {
         first_name: 'Generic',
         last_name: 'Name',
@@ -38,6 +39,8 @@ RSpec.describe 'create user', type: :request do
       expect(user_response[:data]).to have_key :belt_test_metrics
 
       expect(user_response[:data][:first_name]).to eq(@user_params[:first_name])
+      expect(user_response[:data][:current_belt_rank]).to eq('white')
+      expect(user_response[:data][:belt_test_metrics][:student_average][:jump_rope]).to eq(nil)
     end
   end
 end
