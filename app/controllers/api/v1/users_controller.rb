@@ -7,6 +7,7 @@ module Api
         user = User.new(user_params)
         user.user_status = 0
         if user.save
+          user.user_belt_ranks.create!(new_belt_params)
           render json: UsersSerializer.new_user(user)
         else
           render json: user.errors.full_messages.to_sentence
@@ -24,6 +25,17 @@ module Api
           :password,
           :password_confirmation
         )
+      end
+
+      def new_belt_params
+        binding.pry
+        {
+          belt_rank_id: 1,
+          jump_rope: nil,
+          sit_ups: nil,
+          balanced_kicks: nil,
+          lunge_pumps: nil
+        }
       end
     end
   end
