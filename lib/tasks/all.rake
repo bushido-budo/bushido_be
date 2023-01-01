@@ -26,5 +26,3 @@ namespace :csv_load do
                users] do
   end
 end
-
-puts 'Database successfully loaded from CSV files in db/data if no errors exist below this message'
