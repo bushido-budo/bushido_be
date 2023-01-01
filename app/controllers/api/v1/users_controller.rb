@@ -10,7 +10,7 @@ module Api
           user.user_belt_ranks.create!(new_belt_params)
           render json: UsersSerializer.new_user(user)
         else
-          render json: user.errors.full_messages.to_sentence
+          render json: { data: { error: user.errors.full_messages.to_sentence } }, status: 400
         end
       end
 
