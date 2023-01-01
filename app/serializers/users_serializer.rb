@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class UsersSerializer
-  # rubocop:disable Metrics/MethodLength
-  # rubocop:disable Metrics/AbcSize
+  # rubocop:disable Metrics/MethodLength, Metrics/AbcSize
   def self.new_user(user)
     {
       'data': {
@@ -48,6 +47,5 @@ class UsersSerializer
       }
     }
   end
-  # rubocop:enable Metrics/MethodLength
-  # rubocop:enable Metrics/AbcSize
+  # rubocop:enable Metrics/MethodLength, Metrics/AbcSize
 end
