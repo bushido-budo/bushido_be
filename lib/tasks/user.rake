@@ -12,7 +12,8 @@ namespace :csv_load do
         first_name: row[0],
         last_name: row[1],
         email: row[2],
-        password_digest: row[3],
+        password: row[3],
+        password_confirmation: row[3],
         address: row[4],
         user_status: row[5]
       )
